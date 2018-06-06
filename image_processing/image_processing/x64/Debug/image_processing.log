@@ -1,0 +1,3 @@
+﻿  image_processing.cpp
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  image_processing.vcxproj -> D:\Documents\Faks\ScanIt\image_processing\x64\Debug\image_processing.exe

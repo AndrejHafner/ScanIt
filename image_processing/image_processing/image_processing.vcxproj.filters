@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="image_processing.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="image_processing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,5 +29,19 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="list1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="20180606_171656.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="20180606_171643.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="20180606_171647.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

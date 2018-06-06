@@ -1,2 +1,9 @@
-﻿  image_processing.cpp
-  image_processing.vcxproj -> D:\Documents\Faks\ScanIt\image_processing\Debug\image_processing.exe
+﻿image_processing.obj : error LNK2019: unresolved external symbol "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPAX@Z) referenced in function "public: __thiscall cv::Mat::~Mat(void)" (??1Mat@cv@@QAE@XZ)
+image_processing.obj : error LNK2019: unresolved external symbol "private: char * __thiscall cv::String::allocate(unsigned int)" (?allocate@String@cv@@AAEPADI@Z) referenced in function "public: __thiscall cv::String::String(char const *)" (??0String@cv@@QAE@PBD@Z)
+image_processing.obj : error LNK2019: unresolved external symbol "private: void __thiscall cv::String::deallocate(void)" (?deallocate@String@cv@@AAEXXZ) referenced in function "public: __thiscall cv::String::~String(void)" (??1String@cv@@QAE@XZ)
+image_processing.obj : error LNK2019: unresolved external symbol "void __cdecl cv::error(int,class cv::String const &,char const *,char const *,int)" (?error@cv@@YAXHABVString@1@PBD1H@Z) referenced in function "public: class cv::Mat & __thiscall cv::Mat::operator=(class cv::Mat &&)" (??4Mat@cv@@QAEAAV01@$$QAV01@@Z)
+image_processing.obj : error LNK2019: unresolved external symbol "public: void __thiscall cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QAEXXZ) referenced in function "public: void __thiscall cv::Mat::release(void)" (?release@Mat@cv@@QAEXXZ)
+image_processing.obj : error LNK2019: unresolved external symbol "class cv::Mat __cdecl cv::imread(class cv::String const &,int)" (?imread@cv@@YA?AVMat@1@ABVString@1@H@Z) referenced in function _main
+D:\Documents\Faks\opencv\build\x64\vc15\lib\opencv_world341.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Documents\Faks\opencv\build\x64\vc15\lib\opencv_world341d.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\Documents\Faks\ScanIt\image_processing\Debug\image_processing.exe : fatal error LNK1120: 6 unresolved externals
