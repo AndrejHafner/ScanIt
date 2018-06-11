@@ -12,6 +12,7 @@
 #define MIN_MERGE_ANGLE 5
 #define MAX_ANGLE_THRESH 30
 #define AREA_SIZE 20
+#define SCORE_RECT_WIDTH 40
 
 #define degreesToRadians(angleDegrees) ((angleDegrees) * CV_PI / 180.0)
 #define radiansToDegrees(angleRadians) ((angleRadians) * 180.0 / CV_PI)
@@ -31,6 +32,7 @@ typedef struct LineIntersecPack
 typedef struct Quadrilateral
 {
 	cv::Point p1, p2, p3, p4;
+	float area;
 } Quadrilateral;
 
 struct lineXSort
@@ -73,3 +75,8 @@ struct quadPtsSort
 		return (left.x < right.x) || ((left.x == right.x) && (left.y < right.y));
 	}
 };
+
+
+Quadrilateral scoreBestQuadrilateral(vector<Quadrilateral> quads, Mat img);
+float scoreQuadrilateral(Quadrilateral quad, Mat img);
+vector<Line> proccesLines(vector<Vec4i> raw_lines, Mat dst, Mat resized, int minMergeDist, int minMergeAngle);

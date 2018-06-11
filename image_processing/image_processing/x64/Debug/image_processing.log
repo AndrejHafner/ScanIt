@@ -5,8 +5,22 @@ d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(262): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(334): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(335): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(532): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(572): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(633): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(726): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(530): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(534): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(548): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(577): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(693): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(696): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(699): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(702): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(710): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(722): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(723): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(745): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(785): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(871): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(872): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(873): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(907): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(1000): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   image_processing.vcxproj -> D:\Documents\Faks\ScanIt\image_processing\x64\Debug\image_processing.exe
