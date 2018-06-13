@@ -18,9 +18,10 @@ d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(723): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(745): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(785): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(872): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(817): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(873): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(874): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(909): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(999): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(875): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(910): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\documents\faks\scanit\image_processing\image_processing\image_processing.cpp(997): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   image_processing.vcxproj -> D:\Documents\Faks\ScanIt\image_processing\x64\Debug\image_processing.exe

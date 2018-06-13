@@ -1,24 +1,34 @@
 package com.scanit.likewise.scanitandroid;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.SurfaceView;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.Toast;
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
+import org.opencv.core.Core;
 import org.opencv.core.Mat;
+import org.opencv.imgproc.Imgproc;
 
 public class MainActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
 
     private static final String TAG = "OCVSample::Activity";
     private CameraBridgeViewBase _cameraBridgeViewBase;
+    Button extractImgBt;
+    boolean extract = false;
+    Context mContext;
 
     private BaseLoaderCallback _baseLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -45,16 +55,26 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
-
+        mContext = getApplicationContext();
         // Permissions for Android 6+
         ActivityCompat.requestPermissions(MainActivity.this,
                 new String[]{Manifest.permission.CAMERA},
                 1);
-
+        extract = false;
         _cameraBridgeViewBase = (CameraBridgeViewBase) findViewById(R.id.main_surface);
+        extractImgBt = findViewById(R.id.take_pic_bt);
+
+        extractImgBt.setOnClickListener(captureImg);
         _cameraBridgeViewBase.setVisibility(SurfaceView.VISIBLE);
         _cameraBridgeViewBase.setCvCameraViewListener(this);
     }
+
+    View.OnClickListener captureImg = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            extract = true;
+        }
+    };
 
     @Override
     public void onPause() {
@@ -65,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     @Override
     public void onResume() {
         super.onResume();
+        extract = false;
         if (!OpenCVLoader.initDebug()) {
             Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
             OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_0_0, this, _baseLoaderCallback);
@@ -112,11 +133,23 @@ public class MainActivity extends AppCompatActivity implements CameraBridgeViewB
     }
 
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        Mat matGray = inputFrame.gray();
-        salt(matGray.getNativeObjAddr(), 2000);
+
+        Mat matGray = inputFrame.rgba();
+        Mat res = new Mat();
+
+        boolean ret = salt(matGray.getNativeObjAddr(), res.getNativeObjAddr(),extract);
+        if(ret)
+        {
+            //move to another screen
+            Intent intent = new Intent(mContext,ImageShow.class);
+            intent.putExtra("imgAddr",res.getNativeObjAddr());
+            startActivity(intent);
+
+        }
+
         return matGray;
     }
 
-    public native void salt(long matAddrGray, int nbrElem);
+    public native boolean salt(long matAddrGray, long extractAddr, boolean extract);
 }
 
